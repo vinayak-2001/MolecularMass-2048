@@ -21,5 +21,5 @@
 ## Losing-Window
 ![Losing-Window](/screenshots/losingWindow.png)
 
-## Mainting Responsiveness
+## Responsiveness
 ![Responsiveness](/screenshots/responsiveness.png)
