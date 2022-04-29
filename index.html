@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MolecularMass-2048</title>
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" type="module"></script>
+</head>
+
+<body>
+  <div id="alert-modal" class="alert-modal"></div>
+
+  <div id="title">MolecularMass-2048</div>
+
+  <header class="header">
+
+    <button class="how-to-play show-modal">How to Play</button>
+
+    <div style="display: flex;gap:0.5rem;">
+      <div id="score">Score : </div>
+      <div id="score-board">0</div>
+    </div>
+
+    <div style="display: flex;gap:0.5rem;">
+      <div id="score">High Score : </div>
+      <div id="high-score-board">0</div>
+    </div>
+
+  </header>
+
+  <div class="modal hidden">
+
+    <button class="close-modal">x</button>
+    <h1>How to Play</h1>
+    <p>
+      <ul class="modal-list">
+      <li>
+        Combine tiles of the same molecular mass of chemical compounds in an attempt.
+      </li>
+      <li>
+        Your aim is to create a tile with the molecular mass 2048 to won.
+      </li>
+      <li>
+        Pressing the arrow keys the game board will move all tiles in the direction of the key pressed.
+      </li>
+      <li>
+        Two tiles with the same molecular mass will merge when they collide to create a single tile with double the value.
+      </li>
+      <li>
+        Score updates with the molecular weights of two tiles which are combining.
+      </li>
+      <li>
+        The game is over when there are no valid ways for you to move the tiles.
+      </li>
+    </ul>
+    </p>
+
+  </div>
+
+  <div class="overlay hidden"></div>
+
+  <div id="game-board"></div>
+
+  <script>
+    function reloadWindow(){
+      window.location.reload();
+    };
+  </script>
+  
+</body>
+</html>

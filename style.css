@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  /* background-color: #333; */
+  background-image: url("/assets/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-size: 7vmin;
+  position: relative;
+}
+
+#title {
+  font-size: larger;
+  color: #333;
+  background-color: #f2f2f2;
+  border-radius: 1px;
+  font-family: "Fredoka One", cursive;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 0 10px 0 10px;
+}
+
+.alert-modal {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateY(-200%);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.show {
+  transform: translateY(0%);
+}
+
+.alert-heading {
+  padding: 7.5vmin;
+  border: 0.75vmin solid #f2f2f2;
+  border-radius: 5px;
+  color: #f2f2f2;
+  z-index: 200;
+  background-color: #333;
+  font-family: "Fredoka One", cursive;
+}
+
+.play-again {
+  padding: 2.5vmin 5vmin;
+  border: 0.5vmin solid #f2f2f2;
+  color: #f2f2f2;
+  z-index: 200;
+  font-size: 4vmin;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #333;
+  font-family: "Fredoka One", cursive;
+  border-radius: 5px;
+}
+
+.header {
+  display: flex;
+  gap: 2rem;
+  background-color: #f2f2f2;
+  margin: 5px 0;
+  padding: 2px 10px 2px 10px;
+  border-radius: 3px;
+  font-size: 1rem;
+  align-items: center;
+}
+
+#score-board,
+#score {
+  color: #333;
+  font-family: "Fredoka One", cursive;
+  font-weight: bold;
+  font-size: 3.25vmin;
+}
+
+#score {
+  gap: 1rem;
+}
+
+#high-score-board,
+#high-score {
+  color: #333;
+  font-size: 3.25vmin;
+  font-weight: bold;
+  font-family: "Fredoka One", cursive;
+}
+
+.how-to-play {
+  background-color: #131313;
+  color: #f2f2f2;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 2vmin;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: "Fredoka One", cursive;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+  background-color: #ccc;
+  gap: var(--cell-gap);
+  border-radius: 1vmin;
+  padding: var(--cell-gap);
+  position: relative;
+}
+
+.cell {
+  background-color: #aaa;
+  border-radius: 1vmin;
+}
+
+.tile {
+  color: rgba(0, 0, 0, 0);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  border-radius: 1vmin;
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  font-weight: bold;
+  animation: show 200ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0.5;
+    transform: scale(0);
+  }
+}
+
+.tile[data-value="2"] {
+  background-image: url(/assets/tiles_img/1.png);
+}
+.tile[data-value="4"] {
+  background-image: url(/assets/tiles_img/2.png);
+}
+
+.tile[data-value="8"] {
+  background-image: url(/assets/tiles_img/3.png);
+}
+
+.tile[data-value="16"] {
+  background-image: url(/assets/tiles_img/4.png);
+}
+
+.tile[data-value="32"] {
+  background-image: url(/assets/tiles_img/5.png);
+}
+
+.tile[data-value="64"] {
+  background-image: url(/assets/tiles_img/6.png);
+}
+
+.tile[data-value="128"] {
+  background-image: url(/assets/tiles_img/7.png);
+}
+
+.tile[data-value="256"] {
+  background-image: url(/assets/tiles_img/8.png);
+}
+
+.tile[data-value="512"] {
+  background-image: url(/assets/tiles_img/9.png);
+}
+
+.tile[data-value="1024"] {
+  background-image: url(/assets/tiles_img/10.png);
+}
+
+.tile[data-value="2048"] {
+  background-image: url(/assets/tiles_img/11.png);
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 1rem;
+  font-family: "Fredoka One", cursive;
+  max-width: 1000px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal p {
+  font-size: 1rem;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.modal h1 {
+  font-size: 5vmin;
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+  font-weight: bold;
+}
+
+.close-modal {
+  right: 2vmin;
+  top: 2vmin;
+  position: absolute;
+  background-color: #131313;
+  color: white;
+  padding: 0.5vmin 1vmin 0.5vmin 1vmin;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  font-size: 2vmin;
+  cursor: pointer;
+  height: 3.5vmin;
+  width: 3.5vmin;
+}
+
+li {
+  font-weight: bold;
+  font-size: 2.5vmin;
+  font-family: "Fredoka One", cursive;
+}
