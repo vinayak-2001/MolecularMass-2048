@@ -1,4 +1,4 @@
-**# MolecularMass-2048**
+# MolecularMass-2048
 <!-- **MolecularMass-2048** -->
 
 - Enhancement to very popular **2048 game**.
@@ -6,14 +6,14 @@
 - Smooth gaming experience.
 - Easy to **play with the arrows keys only.**
     
-##**Loading-Window**
+## Loading-Window
 ![Loading-Window](/screenshots/loadingWindow.png)
     
-##**Intermediate-Window**
-![Intermediate-Window](/screenshots/loadingWindow.png)
+## Intermediate-Window
+![Intermediate-Window](/screenshots/intermediateWindow.png)
 
-##**Wining-Window**
-![Wining-Window](/screenshots/loadingWindow.png)
+## Wining-Window
+![Wining-Window](/screenshots/winingWindow.png)
     
-##**Losing-Window**
-![Losing-Window](/screenshots/loadingWindow.png)
+## Losing-Window
+![Losing-Window](/screenshots/losingWindow.png)
