@@ -8,6 +8,9 @@
     
 ## Loading-Window
 ![Loading-Window](/screenshots/loadingWindow.png)
+
+## How-To-Play
+![How-To-Play](/screenshots/howToPlay.png)
     
 ## Intermediate-Window
 ![Intermediate-Window](/screenshots/intermediateWindow.png)
