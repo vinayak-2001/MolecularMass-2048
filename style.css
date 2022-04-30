@@ -7,7 +7,7 @@
 
 body {
   /* background-color: #333; */
-  background-image: url("/assets/2.jpg");
+  background-image: url("./assets/2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -161,46 +161,46 @@ body {
 }
 
 .tile[data-value="2"] {
-  background-image: url(/assets/tiles_img/1.png);
+  background-image: url(./assets/tiles_img/1.png);
 }
 .tile[data-value="4"] {
-  background-image: url(/assets/tiles_img/2.png);
+  background-image: url(./assets/tiles_img/2.png);
 }
 
 .tile[data-value="8"] {
-  background-image: url(/assets/tiles_img/3.png);
+  background-image: url(./assets/tiles_img/3.png);
 }
 
 .tile[data-value="16"] {
-  background-image: url(/assets/tiles_img/4.png);
+  background-image: url(./assets/tiles_img/4.png);
 }
 
 .tile[data-value="32"] {
-  background-image: url(/assets/tiles_img/5.png);
+  background-image: url(./assets/tiles_img/5.png);
 }
 
 .tile[data-value="64"] {
-  background-image: url(/assets/tiles_img/6.png);
+  background-image: url(./assets/tiles_img/6.png);
 }
 
 .tile[data-value="128"] {
-  background-image: url(/assets/tiles_img/7.png);
+  background-image: url(./assets/tiles_img/7.png);
 }
 
 .tile[data-value="256"] {
-  background-image: url(/assets/tiles_img/8.png);
+  background-image: url(./assets/tiles_img/8.png);
 }
 
 .tile[data-value="512"] {
-  background-image: url(/assets/tiles_img/9.png);
+  background-image: url(./assets/tiles_img/9.png);
 }
 
 .tile[data-value="1024"] {
-  background-image: url(/assets/tiles_img/10.png);
+  background-image: url(./assets/tiles_img/10.png);
 }
 
 .tile[data-value="2048"] {
-  background-image: url(/assets/tiles_img/11.png);
+  background-image: url(./assets/tiles_img/11.png);
 }
 
 .hidden {
